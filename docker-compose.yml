@@ -1,0 +1,24 @@
+services:
+    core:
+        image: phpinstalllcr
+        hostname: core
+        restart: unless-stopped
+        working_dir: /var/www/app
+        command: ".docker/php/init.sh"
+        env_file:
+            - ./.env
+        volumes:
+            - ./:/var/www/app
+            - ./.docker/php/ini/php.ini-development:/usr/local/etc/php/php.ini
+        networks:
+            - lcr-network
+        ports:
+            - "80:8080"
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+
+networks:
+    lcr-network:
+        driver: bridge
+        external: true
+        name: lcr-network
