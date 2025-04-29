@@ -1,0 +1,33 @@
+/node_modules
+/nvm
+/public/hot
+/public/storage
+/public/vendor/template-default
+/storage/*.key
+/vendor
+/.idea
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+.env
+.phpstorm.meta.php
+_ide_helper.php
+.phpunit.result.cache
+ORACLE.key
+.rnd
+/.rnd
+*.rnd
+*.sql
+
+composer.json.orig
+composer.lock
+composer.lock.orig
+.phpunit.result.cache
+
+# Docker
+/.docker/database
+
+# Used by VS Code extension TODO+
+TODO
+/storage/framework/
